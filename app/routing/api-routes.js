@@ -1,8 +1,4 @@
-// ===============================================================================
-// LOAD DATA
-// We are linking our routes to a series of "data" sources. 
-// These data sources hold arrays of information on table-data, waitinglist, etc.
-// ===============================================================================
+
 var friendData	= require('../data/friends.js');
 var path		= require('path');
 
@@ -37,8 +33,8 @@ app.post('/api/friends', function(req, res) {
 
 	//fix logic
 	for (var i = 1; i < friendData.length; i++) {
-		for (var i = 1; i < 11; i++) {
-			if (difference < Math.abs(friendData.scores[i] - newFriend.scores[i])) {
+		for (var n = 1; n < 11; n++) {
+			if (difference < Math.abs(friendData[i].scores[n] - newFriend.scores[n])) {
 				difference += Math.abs(friendData.scores[i] - newFriend.scores[i]);
 				friendMatch = 
 			}
